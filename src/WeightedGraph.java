@@ -18,4 +18,15 @@ public class WeightedGraph<V extends Comparable<V>> {
         source.addAdjacentVertex(destination, weight);
         map.get(source).add(destination);
     }
+
+    public List<Vertex<V>> getAdjacentVertices(Vertex<V> vertex) {
+        if (!map.containsKey(vertex)) {
+            throw new IllegalArgumentException("Vertex " + vertex + " is out of range!");
+        }
+        return map.get(vertex);
+    }
+
+    public Set<Vertex<V>> getAllVertices() {
+        return map.keySet();
+    }
 }
