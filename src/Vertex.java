@@ -15,4 +15,12 @@ public class Vertex<V> {
     public V getData() {
         return data;
     }
+    public Map<Vertex<V>, Double> getAdjacentVertices() {
+        return adjacentVertices;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(data);
+    }
 }
