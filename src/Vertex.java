@@ -12,4 +12,7 @@ public class Vertex<V> {
         this.data = data;
         this.adjacentVertices = new HashMap<>();
     }
+    public V getData() {
+        return data;
+    }
 }
